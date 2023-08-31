@@ -1,0 +1,49 @@
+//Open the src/App.js file and replace its contents with the following code:
+import React, { useState } from 'react';
+import './App.css'; // Create an App.css file for styling
+
+function App() {
+  const [counter, setCounter] = useState(0);
+
+  const increaseCounter = () => {
+    setCounter(counter + 1);
+  };
+
+  const decreaseCounter = () => {
+    setCounter(counter - 1);
+  };
+
+  return (
+    <div className="App">
+      <h1>Counter App</h1>
+      <div className="counter-container">
+        <button onClick={decreaseCounter}>Decrease</button>
+        <p className="counter">{counter}</p>
+        <button onClick={increaseCounter}>Increase</button>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+//Create a new file named App.css in the src folder and add the following styles:
+.App {
+  text-align: center;
+  padding: 50px;
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.counter {
+  font-size: 48px;
+  margin: 0 20px;
+}
+
+// the development server using the command:
+npm run dev
